@@ -14,22 +14,34 @@ public class DiaryActivity extends AppCompatActivity {
     ListFragment   listFragment   =  new ListFragment();
     StatusFragment statusFragment =  new StatusFragment();
     WriteFragment  writeFragment  =  new WriteFragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.diary_activity);
 
-        BottomNavigationView bottom = findViewById(R.id.bottom_nav);
-        bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, listFragment).commit();
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (R.id.bottom_nav) {
+                switch (menuItem.getItemId()) {
                     case R.id.bottom_tab1:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, listFragment).commit();
-                }
-                        return false;
+                        return true;
 
+                    case R.id.bottom_tab2:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, writeFragment).commit();
+                        return true;
+
+                    case R.id.bottom_tab3:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, statusFragment).commit();
+                        return true;
+                }
+                return false;
             }
         });
+
 }
 }
