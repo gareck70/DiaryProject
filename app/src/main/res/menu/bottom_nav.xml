@@ -5,17 +5,20 @@
         android:id="@+id/bottom_tab1"
         android:icon="@drawable/ic_list"
         android:title="@string/list"
+        android:enabled="true"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/bottom_tab2"
         android:icon="@drawable/ic_pencil"
+        android:enabled="true"
         android:title="@string/write"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/bottom_tab3"
         android:icon="@drawable/ic_graph"
+        android:enabled="true"
         android:title="@string/status"
-        app:showAsAction="ifRoom" />
+    app:showAsAction="ifRoom" />
 </menu>
