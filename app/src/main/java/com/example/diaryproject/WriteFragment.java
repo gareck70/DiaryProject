@@ -17,6 +17,7 @@ public class WriteFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.write_fragment, container, false);
 
+
         return rootView;
     }
 }
