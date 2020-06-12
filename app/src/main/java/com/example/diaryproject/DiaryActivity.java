@@ -22,7 +22,7 @@ public class DiaryActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, listFragment).commit();
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        final BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

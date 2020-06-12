@@ -74,12 +74,55 @@
         android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:orientation="vertical">
+
         <ImageView
+            android:id="@+id/pictureImageView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_margin="10dp"/>
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_no_pictures" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내용"
+            android:textSize="14dp" />
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/moodImageView2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_happy_svgrep"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_wb_sunny_black_24dp"
+                android:layout_toRightOf="@id/moodImageView2"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="일산동구 주엽동"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="6월11일"
+                android:textColor="#FF0000FF"
+                android:textSize="16sp" />
+        </RelativeLayout>
     </LinearLayout>
-
-
 </androidx.cardview.widget.CardView>
