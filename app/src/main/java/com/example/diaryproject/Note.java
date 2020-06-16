@@ -1,15 +1,15 @@
 package com.example.diaryproject;
 
 public class Note {
-    int id;
-    String weather;
-    String address;
-    String locationX;
-    String locationY;
-    String contents;
-    String mood;
-    String picture;
-    String CreateDateStr;
+    private int id;
+    private String weather;
+    private String address;
+    private String locationX;
+    private String locationY;
+    private String contents;
+    private String mood;
+    private String picture;
+    private String CreateDateStr;
 
     public int getId() {
         return id;
